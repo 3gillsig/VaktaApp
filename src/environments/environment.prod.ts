@@ -1,11 +1,12 @@
 export const environment = {
   production: true,
   firebase: {
-    apiKey: '<your-key>',
-    authDomain: '<your-project-authdomain>',
-    databaseURL: '<your-database-URL>',
-    projectId: '<your-project-id>',
-    storageBucket: '<your-storage-bucket>',
-    messagingSenderId: '<your-messaging-sender-id>'
+    apiKey: "AIzaSyBhbURRAqhYyCYIBPVZWD0Z0wCPkoH1b6M",
+   authDomain: "verkefnic.firebaseapp.com",
+   databaseURL: "https://verkefnic.firebaseio.com",
+   projectId: "verkefnic",
+   storageBucket: "verkefnic.appspot.com",
+   messagingSenderId: "116900936049"
+
   }
 };
