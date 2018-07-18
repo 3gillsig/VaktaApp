@@ -10,18 +10,9 @@ import { auth } from 'firebase';
 export class AppComponent {
   itemRef: AngularFireObject<any>;
   item: Observable<any>;
-  constructor(public afAuth:AngularFireAuth, public db: AngularFireDatabase) {
+  constructor(public afAuth: AngularFireAuth, public db: AngularFireDatabase) {
     this.itemRef = db.object('item');
     this.item = this.itemRef.valueChanges();
-  }
-  save(newName: string) {
-    this.itemRef.set({ name: newName });
-  }
-  update(newSize: string) {
-    this.itemRef.update({ size: newSize });
-  }
-  delete() {
-    this.itemRef.remove();
   }
   login() {
    this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider());
