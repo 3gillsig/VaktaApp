@@ -7,11 +7,14 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { environment } from '../environments/environment';
+import { MainComponent } from './main/main/main.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 
 @NgModule({
   imports: [
     BrowserModule,
+    BsDropdownModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase, 'vaktaApp'), // imports firebase/app needed for everything
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
@@ -19,7 +22,7 @@ import { environment } from '../environments/environment';
     AngularFireDatabaseModule
      // imports firebase/storage only needed for storage features
   ],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, MainComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule {}
